@@ -35,7 +35,7 @@ component accessors=true extends='mura.cfobject' output=false {
 
 		local.imageArgs = {};
 
-		if ( not Len(Trim(arguments.size)) or LCase(arguments.size) eq 'custom' ) {
+		if ( !Len(Trim(arguments.size)) || LCase(arguments.size) == 'custom' ) {
 			local.imageArgs.width = Val(arguments.width);
 			local.imageArgs.height = Val(arguments.height);
 		} else {
