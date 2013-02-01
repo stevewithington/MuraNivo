@@ -28,7 +28,7 @@ component accessors=true extends='mura.cfobject' output=false {
 	) {
 		var local = {};
 		local.str = '';
-		local.pluginConfig = get$().getBean('pluginManager').getConfig('MuraNivo');
+		local.pluginConfig = getPlugin('MuraNivo');
 
 		local.feed = get$().getBean('feed').loadBy(arguments.feed);
 		local.iterator = local.feed.getIterator();

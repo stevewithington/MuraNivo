@@ -15,7 +15,7 @@
 	<package>MuraNivo</package>
 	<directoryFormat>packageOnly</directoryFormat>
 	<loadPriority>5</loadPriority>
-	<version>0.102</version>
+	<version>0.103</version>
 	<provider>Steve Withington</provider>
 	<providerURL>http://stephenwithington.com</providerURL>
 	<category>Utility</category>
