@@ -47,11 +47,7 @@ component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=
 
 		StructAppend(local.params, local.defaultParams, false);
 
-		// arguments.$.loadJSLib(); // make sure jQuery is loaded
-		// variables.pluginConfig.addToHTMLHeadQueue('extensions/scripts/scriptsHead.cfm');
-
 		local.str = arguments.$.muraNivo.dspMuraNivo(argumentCollection=local.params);
-
 		return local.str;
 	}
 

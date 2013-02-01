@@ -20,7 +20,7 @@ MuraNivo is a Mura CMS plugin that utilizes [Nivo Slider](http://nivo.dev7studio
 
 ##Responsive-ness
 
-**Just so you know** ... Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select 'small' for the image size and assigned it to the main content area of a one_column.cfm layout template, due to the responsive-ness going on, scaling of the image will occur. You may want to either use custom and put your own height and width in, or create a custom image size by going to **Site Config** > **Edit Site**, then selecting the **Images** tab.
+**Just so you know** ... Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select 'small' for the image size and assign it to the main content area of a one_column.cfm layout template, due to the responsive-ness going on, scaling of the image will occur. You may want to either use custom and put your own height and width in, or create a custom image size by going to **Site Config** > **Edit Site**, then selecting the **Images** tab.
 
 
 ##Tested With

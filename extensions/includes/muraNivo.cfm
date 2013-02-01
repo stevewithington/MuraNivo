@@ -46,10 +46,3 @@
 		});
 	</script>
 </cfoutput>
-<!--- <cfif $.event('debug') eq 1>
-	<cfif IsJSON($.event('params'))>
-		<cfdump var="#DeSerializeJSON($.event('params'))#">
-	<cfelse>
-		<cfdump var="#$.event('params')#">
-	</cfif>
-</cfif> --->
