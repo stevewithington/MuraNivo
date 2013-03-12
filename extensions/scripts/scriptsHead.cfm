@@ -11,8 +11,9 @@
 	params = {};
 	if ( IsJSON($.event('params')) ) { 
 		params = DeSerializeJSON($.event('params')); 
-	};
-	defaultParams = { theme = 'default' };	
+	}
+	defaultParams = { theme = 'default' };
+	defaultParams.theme = 'default';
 	StructAppend(params, defaultParams, false);
 </cfscript></cfsilent>
 <cfoutput>
