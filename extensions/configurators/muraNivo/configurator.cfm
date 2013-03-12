@@ -30,12 +30,12 @@
 		rsImageSizes = $.siteConfig().getCustomImageSizeQuery();
 		arrCustomImageSizes = ListToArray(ValueList(rsImageSizes.name));
 		arrImageSizes.addAll(arrCustomImageSizes);
-	};
+	}
 
 	params = {};
 	if ( IsJSON($.event('params')) ) {
 		params = DeSerializeJSON($.event('params'));
-	};
+	}
 
 	defaultParams = {
 		feed = ''
@@ -61,7 +61,7 @@
 			o.fadeIn('slow');
 		} else {
 			o.hide().find(':input').val('AUTO');
-		};
+		}
 	});
 </script>
 <cfoutput>
