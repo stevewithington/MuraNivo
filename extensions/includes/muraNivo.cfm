@@ -3,7 +3,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2013 Stephen J. Withington, Jr.
+* Copyright 2014 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -41,7 +41,8 @@
 	<script>
 		jQuery(document).ready(function($) {
 			$('###arguments.sliderid#').nivoSlider({
-				effect: '#arguments.effect#'
+				effect: '#arguments.effect#',
+				pauseTime: #Val(arguments.pausetime) * 1000#
 			});
 		});
 	</script>

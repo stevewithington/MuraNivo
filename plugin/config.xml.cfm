@@ -3,7 +3,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2013 Stephen J. Withington, Jr.
+* Copyright 2014 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -15,7 +15,7 @@
 	<package>MuraNivo</package>
 	<directoryFormat>packageOnly</directoryFormat>
 	<loadPriority>5</loadPriority>
-	<version>0.106</version>
+	<version>1.0</version>
 	<provider>Steve Withington</provider>
 	<providerURL>http://stephenwithington.com</providerURL>
 	<category>Utility</category>

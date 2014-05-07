@@ -16,6 +16,7 @@ MuraNivo is a Mura CMS plugin that utilizes [Nivo Slider](http://nivo.dev7studio
 	* Select a **Transition Effect**
 	* If you wish to use your own CSS ID, enter that in the **Slider CSS ID** text field. This ID will create a wrapper as: **yourCSSID-wrapper**. In addition, the ID will be used with the slider itself.
 	* If you wish to display captions, select **Yes** for **Show Caption**. If selected, the content node's Title and Summary will appear in a caption area if any text has been entered in the Summary field.
+	* Select your **How long to show each slide (in seconds)**.
 
 
 ##Responsive-ness
@@ -30,7 +31,7 @@ MuraNivo is a Mura CMS plugin that utilizes [Nivo Slider](http://nivo.dev7studio
 
 
 ##License
-Copyright 2013 Stephen J. Withington, Jr.
+Copyright 2013-2014 Stephen J. Withington, Jr.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 

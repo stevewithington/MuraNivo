@@ -3,7 +3,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2013 Stephen J. Withington, Jr.
+* Copyright 2014 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -46,6 +46,7 @@
 		, sliderid = LCase(Replace(CreateUUID(), '-', '', 'ALL'))
 		, effect = 'random'
 		, showcaption = true
+		, pausetime = 3
 	};
 	
 	StructAppend(params, defaultParams, false);
@@ -149,6 +150,15 @@
 					<input type="radio" class="objectParam" name="showcaption" value="false" <cfif not params.showcaption> checked="checked"</cfif> /> 
 					No
 				</label>
+			</dd>
+			<!--- PAUSE TIME --->
+			<dt><label for="size">How long to show each slide (in seconds)</label></dt>
+			<dd>
+				<select name="pausetime" id="pausetime" class="objectParam">
+					<cfloop from="1" to="10" index="s">
+						<option value="#s#"<cfif params.pausetime eq s> selected="selected"</cfif>>#HTMLEditFormat(s)#</option>
+					</cfloop>
+				</select>
 			</dd>
 			<!--- MISC. --->
 			<input type="hidden" name="configureddts" class="objectParam" value="#now()#" />

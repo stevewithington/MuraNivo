@@ -2,7 +2,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2013 Stephen J. Withington, Jr.
+* Copyright 2014 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -43,6 +43,7 @@ component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=
 			, sliderid = LCase(Replace(CreateUUID(), '-', '', 'ALL'))
 			, effect = 'random'
 			, showcaption = true
+			, pausetime = 3
 		};
 
 		StructAppend(local.params, local.defaultParams, false);
