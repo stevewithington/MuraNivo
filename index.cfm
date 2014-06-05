@@ -47,6 +47,7 @@ if ( !$.currentUser().isSuperUser() ){
 				<li>If you wish to display captions, select <strong>Yes</strong> for <strong>Show Caption</strong>. If selected, the content node's Title and Summary will appear in a caption area if any text has been entered in the Summary field.</li>
 			</ul>
 		</li>
+		<li>If you wish to output the links for each slide, select <strong>Yes</strong> for <strong>Link Slides</strong>. If selected, each slide will be wrapped with its URL.</li>
 	</ul>
 
 	<!---

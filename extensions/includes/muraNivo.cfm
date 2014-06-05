@@ -17,9 +17,13 @@
 					<cfloop condition="local.iterator.hasNext()">
 						<cfset local.item=local.iterator.next()>
 						<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
-							<a href="#local.item.getURL()#">
+							<cfif YesNoFormat(arguments.outputslidelinks)>
+								<a href="#local.item.getURL()#">
+							</cfif>
 								<img src="#local.item.getImageURL(argumentCollection=local.imageArgs)#" alt="#HTMLEditFormat(local.item.getTitle())#"<cfif arguments.showcaption and Len(Trim(local.item.getSummary()))> title="###arguments.sliderid#-caption-#local.iterator.getRecordIndex()#"</cfif> />
-							</a>
+							<cfif YesNoFormat(arguments.outputslidelinks)>
+								</a>
+							</cfif>
 						</cfif>
 					</cfloop>
 				</div>

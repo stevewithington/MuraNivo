@@ -47,6 +47,7 @@
 		, effect = 'random'
 		, showcaption = true
 		, pausetime = 3
+		, outputslidelinks = true
 	};
 	
 	StructAppend(params, defaultParams, false);
@@ -159,6 +160,19 @@
 						<option value="#s#"<cfif params.pausetime eq s> selected="selected"</cfif>>#HTMLEditFormat(s)#</option>
 					</cfloop>
 				</select>
+			</dd>
+
+			<!--- LINK SLIDES --->
+			<dt><label for="outputslidelinks">Link Slides</label></dt>
+			<dd>
+				<label class="radio inline">
+					<input type="radio" class="objectParam" name="outputslidelinks" value="true" <cfif params.outputslidelinks> checked="checked"</cfif> /> 
+					Yes
+				</label>
+				<label class="radio inline">
+					<input type="radio" class="objectParam" name="outputslidelinks" value="false" <cfif not params.outputslidelinks> checked="checked"</cfif> /> 
+					No
+				</label>
 			</dd>
 			<!--- MISC. --->
 			<input type="hidden" name="configureddts" class="objectParam" value="#now()#" />

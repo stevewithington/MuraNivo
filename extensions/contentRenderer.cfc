@@ -26,6 +26,7 @@ component accessors=true extends='mura.cfobject' output=false {
 		, effect = 'random'
 		, showcaption = true
 		, pausetime = '3'
+		, outputslidelinks = true
 	) {
 		var local = {};
 		local.str = '';

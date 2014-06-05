@@ -44,6 +44,7 @@ component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=
 			, effect = 'random'
 			, showcaption = true
 			, pausetime = 3
+			, outputslidelinks = true
 		};
 
 		StructAppend(local.params, local.defaultParams, false);
