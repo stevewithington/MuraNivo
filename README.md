@@ -6,7 +6,7 @@ MuraNivo is a Mura CMS plugin that utilizes [Nivo Slider](http://nivo.dev7studio
 
 **NOTE:** Before using this plugin, you will need to create a [Local Content Index](http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/). Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image. You may simply wish to create a content collection of a Mura Gallery, which is perfectly suited for this plugin. Once a [Local Content Index](http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/) has been created, simply follow the remaining steps below.
 
-* Select a content item to edit
+* From the **Site Manager**, select any content item to edit it (e.g., the 'About Us' page)
 * Go to **Layout & Objects** tab
 * From the **Available Content Objects** select menu, choose **Plugins**
 * From the **Select Plugin** select menu, choose **MuraNivo**

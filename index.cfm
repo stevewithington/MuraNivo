@@ -35,7 +35,7 @@ if ( !$.currentUser().isSuperUser() ){
 	<p><strong>NOTE:</strong> Before using this plugin, you will need to create a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a>. Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image. You may simply wish to create a content collection of a Mura Gallery, which is perfectly suited for this plugin. Once a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a> has been created, simply follow the remaining steps below.</p>
 
 	<ul>
-		<li>Select a content item to edit</li>
+		<li>From the <strong>Site Manager</strong>, select any content item to edit it (e.g., the 'About Us' page)</li>
 		<li>Go to <strong>Layout &amp; Objects</strong> tab</li>
 		<li>From the <strong>Available Content Objects</strong> select menu, choose <strong>Plugins</strong></li>
 		<li>From the <strong>Select Plugin</strong> select menu, choose <strong>MuraNivo</strong></li>
