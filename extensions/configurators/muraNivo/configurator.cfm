@@ -3,7 +3,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2014 Stephen J. Withington, Jr.
+* Copyright 2015 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -26,7 +26,7 @@
 	arrImageSizes = ['small','medium','large','custom'];
 
 	// IF MuraCMS v6.0+, there may be one or more custom predefined image sizes available
-	if ( ListFirst($.globalConfig('version'), '.') gte 6 ) {
+	if ( ListFirst($.globalConfig('version'), '.') >= 6 ) {
 		rsImageSizes = $.siteConfig().getCustomImageSizeQuery();
 		arrCustomImageSizes = ListToArray(ValueList(rsImageSizes.name));
 		arrImageSizes.addAll(arrCustomImageSizes);
@@ -82,9 +82,9 @@
 				</select>
 			</dd>
 			<!--- FEED --->
-			<cfif rsFeeds.recordcount>
-				<dt><label for="feed">Local Content Index</label></dt>
-				<dd>
+			<dt><label for="feed">Local Content Index</label></dt>
+			<dd>
+				<cfif rsFeeds.recordcount>
 					<select name="feed" id="feed" class="objectParam">
 						<cfif not Len(Trim(params.feed))>
 							<option value=""> &ndash; Select &ndash; </option>
@@ -93,10 +93,13 @@
 							<option value="#feedid#"<cfif params.feed eq feedid> selected="selected"</cfif>>#HTMLEditFormat(name)#</option>
 						</cfloop>
 					</select>
-				</dd>
-			<cfelse>
-				<input type="hidden" name="feed" value="" />
-			</cfif>
+				<cfelse>
+					<p class="alert alert-info">
+						<strong>Ooops!</strong> You need to create a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a> to use this display object. Be sure that your <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a> items contain images! For example, create an index of Gallery items.
+					</p>
+					<input type="hidden" name="feed" value="" />
+				</cfif>
+			</dd>
 			<!--- SLIDER SIZE --->
 			<dt><label for="size">Slider Size</label></dt>
 			<dd>

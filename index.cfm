@@ -3,7 +3,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2014 Stephen J. Withington, Jr.
+* Copyright 2015 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -31,6 +31,9 @@ if ( !$.currentUser().isSuperUser() ){
 	<p>MuraNivo is a Mura CMS plugin that utilizes <a href="http://nivo.dev7studios.com/" target="_blank">Nivo Slider</a> to create configurable slide show display objects.</p>
 
 	<h3>How To</h3>
+
+	<p><strong>NOTE:</strong> Before using this plugin, you will need to create a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a>. Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image. You may simply wish to create a content collection of a Mura Gallery, which is perfectly suited for this plugin. Once a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a> has been created, simply follow the remaining steps below.</p>
+
 	<ul>
 		<li>Select a content item to edit</li>
 		<li>Go to <strong>Layout &amp; Objects</strong> tab</li>
@@ -63,8 +66,9 @@ if ( !$.currentUser().isSuperUser() ){
 	
 	<h3>Tested With</h3>
 	<ul>
-		<li>Mura CMS Core Version <strong>6.0+</strong></li>
-		<li>Adobe ColdFusion <strong>10.0.7</strong></li>
+		<li>Mura CMS Core Version <strong>6.2+</strong></li>
+		<li>Adobe ColdFusion <strong>11.0.3</strong></li>
+		<li>Lucee <strong>4.5.1.000</strong></li>
 	</ul>
 
 	<h3>Need help?</h3>

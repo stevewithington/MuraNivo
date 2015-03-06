@@ -2,7 +2,7 @@
 * 
 * This file is part of MuraNivo TM
 *
-* Copyright 2014 Stephen J. Withington, Jr.
+* Copyright 2015 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
