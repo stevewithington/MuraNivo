@@ -18,13 +18,18 @@ Once a [Local Content Index](http://docs.getmura.com/v6/content-managers/buildin
   ![Example Layout and Objects tab](assets/images/muranivo-2.png)
 * The **MuraNivo** configurator will open
 	* Select a **Nivo Theme**
-	* If you have created any Local Content Collections, choose one of them from the **Local Content Index** select menu
+	* If you have created any Local Content Indexes, choose one of them from the **Local Content Index** select menu
+    ![Example Configurator With a Content Index](assets/images/muranivo-3.png)
+  * If you have *not* created a Local Content Index, you will see a notice informing you to do so
+    ![Example Configurator Without a Content Index](assets/images/muranivo-3.png)
 	* Choose your desired **Slider Size**. If your site has any custom-defined image sizes, the name will appear in the list.
 	* Select a **Transition Effect**
 	* If you wish to use your own CSS ID, enter that in the **Slider CSS ID** text field. This ID will create a wrapper as: **yourCSSID-wrapper**. In addition, the ID will be used with the slider itself.
 	* If you wish to display captions, select **Yes** for **Show Caption**. If selected, the content node's Title and Summary will appear in a caption area if any text has been entered in the Summary field.
 	* Select your **How long to show each slide (in seconds)**.
 	* If you wish to output the links for each slide, select **Yes** for **Link Slides**. If selected, each slide will be wrapped with its URL.
+  * When finished, you should see your MuraNivo slider appear in the region you specified
+    ![Example MuraNivo Slider](assets/images/muranivo-4.png)
 
 
 ##Responsive-ness
