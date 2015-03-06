@@ -21,7 +21,7 @@ Once a [Local Content Index](http://docs.getmura.com/v6/content-managers/buildin
 	* If you have created any Local Content Indexes, choose one of them from the **Local Content Index** select menu
     ![Example Configurator With a Content Index](assets/images/muranivo-3.png)
   * If you have *not* created a Local Content Index, you will see a notice informing you to do so
-    ![Example Configurator Without a Content Index](assets/images/muranivo-3.png)
+    ![Example Configurator Without a Content Index](assets/images/muranivo-5.png)
 	* Choose your desired **Slider Size**. If your site has any custom-defined image sizes, the name will appear in the list.
 	* Select a **Transition Effect**
 	* If you wish to use your own CSS ID, enter that in the **Slider CSS ID** text field. This ID will create a wrapper as: **yourCSSID-wrapper**. In addition, the ID will be used with the slider itself.
