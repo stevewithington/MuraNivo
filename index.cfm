@@ -32,18 +32,28 @@ if ( !$.currentUser().isSuperUser() ){
 
 	<h3>How To</h3>
 
-	<p><strong>NOTE:</strong> Before using this plugin, you will need to create a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a>. Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image. You may simply wish to create a content collection of a Mura Gallery, which is perfectly suited for this plugin. Once a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a> has been created, simply follow the remaining steps below.</p>
+	<p><strong>NOTE:</strong> Before using this plugin, you will need to create a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a>. Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image. You may simply wish to create a content collection of a Mura Gallery, which is perfectly suited for this plugin.</p>
+
+	<p><img src="assets/images/muranivo-1.png" alt="Example Content Collection"></p>
+
+	Once a <a href="http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/">Local Content Index</a> has been created, simply follow the remaining steps below.
 
 	<ul>
 		<li>From the <strong>Site Manager</strong>, select any content item to edit it (e.g., the 'About Us' page)</li>
 		<li>Go to <strong>Layout &amp; Objects</strong> tab</li>
 		<li>From the <strong>Available Content Objects</strong> select menu, choose <strong>Plugins</strong></li>
 		<li>From the <strong>Select Plugin</strong> select menu, choose <strong>MuraNivo</strong></li>
-		<li>In the list of display objects, click <strong>MuraNivo Slider</strong> and assign it to your desired display region</li>
+		<li>In the list of display objects, click <strong>MuraNivo Slider</strong> and assign it to your desired display region<br>
+		<img src="assets/images/muranivo-2.png" alt="Example Local Content Index">
+		</li>
 		<li>The <strong>MuraNivo</strong> configurator will open
 			<ul>
 				<li>Select a <strong>Nivo Theme</strong></li>
-				<li>If you have created any Local Content Collections, choose one of them from the <strong>Local Content Index</strong> select menu</li>
+				<li>If you have created any Local Content Indexes, choose one of them from the <strong>Local Content Index</strong> select menu<br>
+				<img src="assets/images/muranivo-3.png" alt="Example Configurator With a Content Index"></li>
+				<li>If you have <em>not</em> created a Local Content Index, you will see a notice informing you to do so.<br>
+				<img src="assets/images/muranivo-5.png" alt="Example Configurator Without Content Index">
+				</li>
 				<li>Choose your desired <strong>Slider Size</strong>. If your site has any custom-defined image sizes, the name will appear in the list.</li>
 				<li>Select a <strong>Transition Effect</strong></li>
 				<li>If you wish to use your own CSS ID, enter that in the <strong>Slider CSS ID</strong> text field. This ID will create a wrapper as: <strong>yourCSSID-wrapper</strong>. In addition, the ID will be used with the slider itself.</li>
@@ -51,6 +61,9 @@ if ( !$.currentUser().isSuperUser() ){
 			</ul>
 		</li>
 		<li>If you wish to output the links for each slide, select <strong>Yes</strong> for <strong>Link Slides</strong>. If selected, each slide will be wrapped with its URL.</li>
+		<li>When finished, you should see your MuraNivo slider appear in the region you specified<br>
+			<img src="assets/images/muranivo-4.png" alt="Example MuraNivo Slider">
+		</li>
 	</ul>
 
 	<!---
@@ -60,9 +73,9 @@ if ( !$.currentUser().isSuperUser() ){
 	--->
 
 	<h3>Responsive-ness</h3>
-	<div class="alert alert-info">
+	<p>
 		<strong>Just so you know &hellip;</strong> Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select 'small' for the image size and assigned it to the main content area of a one_column.cfm layout template, due to the responsive-ness going on, scaling of the image will occur. You may want to either use <strong>custom</strong> and put your own height and width in, or create a custom image size by going to <strong>Site Config</strong> &gt; <strong>Edit Site</strong>, then selecting the <strong>Images</strong> tab.
-	</div>
+	</p>
 	
 	<h3>Tested With</h3>
 	<ul>
