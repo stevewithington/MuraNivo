@@ -44,7 +44,7 @@ if ( !$.currentUser().isSuperUser() ){
 		<li>From the <strong>Available Content Objects</strong> select menu, choose <strong>Plugins</strong></li>
 		<li>From the <strong>Select Plugin</strong> select menu, choose <strong>MuraNivo</strong></li>
 		<li>In the list of display objects, click <strong>MuraNivo Slider</strong> and assign it to your desired display region<br>
-		<img src="assets/images/muranivo-2.png" alt="Example Local Content Index">
+		<img src="assets/images/muranivo-2.png" alt="Example Layout and Objects tab">
 		</li>
 		<li>The <strong>MuraNivo</strong> configurator will open
 			<ul>
