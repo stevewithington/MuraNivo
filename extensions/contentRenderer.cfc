@@ -35,21 +35,25 @@ component accessors=true extends='mura.cfobject' output=false {
 		local.feed = get$().getBean('feed').loadBy(arguments.feed);
 		local.iterator = local.feed.getIterator();
 
-		local.imageArgs = {};
-
-		if ( !Len(Trim(arguments.size)) || LCase(arguments.size) == 'custom' ) {
-			local.imageArgs.width = Val(arguments.width);
-			local.imageArgs.height = Val(arguments.height);
+		if ( local.feed.getIsNew() ) {
+			local.str = '<div class="alert alert-info"><strong>Ooops!</strong> The Content Collection originally used for this slider has been deleted!</div>'
 		} else {
-			local.imageArgs.size = arguments.size;
-		};
+			local.imageArgs = {};
 
-		get$().loadJSLib(); // make sure jQuery is loaded
-		local.pluginConfig.addToHTMLHeadQueue('extensions/scripts/scriptsHead.cfm');
+			if ( !Len(Trim(arguments.size)) || LCase(arguments.size) == 'custom' ) {
+				local.imageArgs.width = Val(arguments.width);
+				local.imageArgs.height = Val(arguments.height);
+			} else {
+				local.imageArgs.size = arguments.size;
+			};
 
-		savecontent variable='local.str' {
-			include 'includes/muraNivo.cfm';
-		};
+			get$().loadJSLib(); // make sure jQuery is loaded
+			local.pluginConfig.addToHTMLHeadQueue('extensions/scripts/scriptsHead.cfm');
+
+			savecontent variable='local.str' {
+				include 'includes/muraNivo.cfm';
+			};
+		}
 		
 		return local.str;
 	}
