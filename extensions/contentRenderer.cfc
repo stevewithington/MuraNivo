@@ -36,7 +36,9 @@ component accessors=true extends='mura.cfobject' output=false {
 		local.iterator = local.feed.getIterator();
 
 		if ( local.feed.getIsNew() ) {
-			local.str = '<div class="alert alert-info"><strong>Ooops!</strong> The Content Collection originally used for this slider has been deleted!</div>'
+			local.str = '<div class="alert alert-info"><strong>Ooops!</strong> The Content Collection originally used for this slider has been deleted!</div>';
+		} else if ( !local.iterator.hasNext() ) {
+			local.str = '<div class="alert alert-info"><strong>Ooops!</strong> The Content Collection used for this slider has no images!</div>';
 		} else {
 			local.imageArgs = {};
 
