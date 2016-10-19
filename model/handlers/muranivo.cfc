@@ -1,6 +1,6 @@
 /**
 *
-* This file is part of MuraNivo TM
+* This file is part of MuraNivo
 *
 * Copyright 2015-2016 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0

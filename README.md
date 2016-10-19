@@ -1,4 +1,4 @@
-#MuraNivo TM
+#MuraNivo
 
 MuraNivo is a Mura CMS plugin that utilizes [Nivo Slider](http://nivo.dev7studios.com/) to create configurable slide show display objects.
 
@@ -38,14 +38,13 @@ Once a [Local Content Index](http://docs.getmura.com/v6/content-managers/buildin
 
 
 ##Tested With
-
-* Mura CMS Core Version 6.2+
-* Adobe ColdFusion 11.0.3
-* Lucee 4.5.1.000
+* [Mura CMS](http://www.getmura.com) Core Version 7.0+
+* [Adobe ColdFusion](http://www.adobe.com/coldfusion) 2016.0.02.299200
+* [Lucee](http://lucee.org) 5.0.0.254
 
 
 ##License
-Copyright 2013-2015 Stephen J. Withington, Jr.
+Copyright 2015-2016 Stephen J. Withington, Jr.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
