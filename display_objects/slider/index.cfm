@@ -1,14 +1,26 @@
-<cfsilent><cfscript>
+<cfscript>
 /**
-* 
+*
 * This file is part of MuraNivo TM
 *
-* Copyright 2015 Stephen J. Withington, Jr.
+* Copyright 2015-2016 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 */
-</cfscript></cfsilent>
+	params = {};
+	if ( IsJSON($.event('params')) ) {
+		params = DeSerializeJSON($.event('params'));
+	} else if ( IsStruct($.event('params')) ) {
+		params = $.event('params');
+	}
+	defaultParams = { theme = 'default' };
+	StructAppend(params, defaultParams, false);
+
+	pluginpath = m.globalConfig('context') & '/plugins/MuraNivo';
+	param name='objectparams.sayhellomessage' default='';
+</cfscript>
+
 <cfoutput>
 	<div id="#arguments.sliderid#-wrapper" class="row-fluid">
 		<div class="span12">
@@ -42,12 +54,25 @@
 			</cfif>
 		</div>
 	</div>
+
 	<script>
-		jQuery(document).ready(function($) {
-			$('###arguments.sliderid#').nivoSlider({
-				effect: '#arguments.effect#',
-				pauseTime: #Val(arguments.pausetime) * 1000#
-			});
-		});
-	</script>
+	  Mura(function(m) { 
+	    m.loader() 
+	      .loadcss('#pluginPath#/assets/nivo-slider/nivo-slider.css') 
+				.loadcss('#pluginPath#/assets/nivo-slider/themes/#params.theme#/#params.theme#.css')
+	      .loadjs(
+	      	'#pluginPath#/assets/nivo-slider/jquery.nivo.slider.pack.js',
+	        function() {
+	          // Do something with the loaded JS
+						jQuery(document).ready(function($) {
+							$('###arguments.sliderid#').nivoSlider({
+								effect: '#arguments.effect#',
+								pauseTime: #Val(arguments.pausetime) * 1000#
+							});
+						});
+
+	        }
+	      ); 
+	  });
+ </script>
 </cfoutput>

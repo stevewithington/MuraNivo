@@ -1,24 +1,24 @@
 <cfscript>
 /**
-* 
+*
 * This file is part of MuraNivo TM
 *
-* Copyright 2015 Stephen J. Withington, Jr.
+* Copyright 2015-2016 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 */
-if ( !IsDefined('$') ) {
-	$ = application.serviceFactory.getBean('$');
+if ( !IsDefined('m') ) {
+	m = application.serviceFactory.getBean('m');
 	if ( StructKeyExists(session, 'siteid') ) {
-		$.init(session.siteid);
+		m.init(session.siteid);
 	} else {
-		$.init('default');
+		m.init('default');
 	};
 };
 // restrict to Super Users
-if ( !$.currentUser().isSuperUser() ){
-	location($.globalConfig('context') & '/admin/', false);
+if ( !m.currentUser().isSuperUser() ){
+	location(m.globalConfig('context') & '/admin/', false);
 };
 </cfscript>
 <style type="text/css">
@@ -66,37 +66,29 @@ if ( !$.currentUser().isSuperUser() ){
 		</li>
 	</ul>
 
-	<!---
-	<h3>Developers</h3>
-	<p>Technically, you could do something like this as well:</p>
-	<pre>[mura]$.muraNivo.dspMuraNivo(feed='Latest News',size='custom',height=100,width=300)[/mura]</pre>
-	--->
-
 	<h3>Responsive-ness</h3>
 	<p>
 		<strong>Just so you know &hellip;</strong> Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select 'small' for the image size and assigned it to the main content area of a one_column.cfm layout template, due to the responsive-ness going on, scaling of the image will occur. You may want to either use <strong>custom</strong> and put your own height and width in, or create a custom image size by going to <strong>Site Config</strong> &gt; <strong>Edit Site</strong>, then selecting the <strong>Images</strong> tab.
 	</p>
-	
+
 	<h3>Tested With</h3>
 	<ul>
-		<li>Mura CMS Core Version <strong>6.2+</strong></li>
-		<li>Adobe ColdFusion <strong>11.0.3</strong></li>
-		<li>Lucee <strong>4.5.1.000</strong></li>
+		<li><a href="http://www.getmura.com">Mura CMS</a> Core Version <strong>7.0+</strong></li>
+		<li><a href="http://www.adobe.com/coldfusion">Adobe ColdFusion</a> <strong>2016.0.02.299200</strong></li>
+		<li><a href="http://lucee.org">Lucee</a> <strong>5.0.0.254</strong></li>
 	</ul>
 
 	<h3>Need help?</h3>
 	<p>If you're running into an issue, please let me know at <a href="https://github.com/stevewithington/MuraNivo/issues">https://github.com/stevewithington/MuraNivo/issues</a> and I'll try to address it as soon as I can.</p>
-	
-	<p>Cheers!<br />
-	<a href="http://stephenwithington.com">Steve Withington</a></p>
-	
+
+	<h3>Cheers!<br />
+	<a href="http://stephenwithington.com">Steve Withington</a></h3>
+
 </div>
 </cfsavecontent>
 <cfoutput>
-	#$.getBean('pluginManager').renderAdminTemplate(
+	#m.getBean('pluginManager').renderAdminTemplate(
 		body = body
 		, pageTitle = ''
-		, jsLib = 'jquery'
-		, jsLibLoaded = false
 	)#
 </cfoutput>

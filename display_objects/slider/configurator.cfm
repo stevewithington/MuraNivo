@@ -1,9 +1,9 @@
 <cfscript>
 /**
-* 
+*
 * This file is part of MuraNivo TM
 *
-* Copyright 2015 Stephen J. Withington, Jr.
+* Copyright 2015-2016 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -49,7 +49,7 @@
 		, pausetime = 3
 		, outputslidelinks = true
 	};
-	
+
 	StructAppend(params, defaultParams, false);
 </cfscript>
 <style type="text/css">
@@ -67,9 +67,9 @@
 	});
 </script>
 <cfoutput>
-	<div id="availableObjectParams"	
-		data-object="plugin" 
-		data-name="MuraNivo" 
+	<div id="availableObjectParams"
+		data-object="plugin"
+		data-name="MuraNivo"
 		data-objectid="#$.event('objectID')#">
 		<dl class="singleColumn">
 			<!--- NIVO THEME --->
@@ -77,7 +77,7 @@
 			<dd>
 				<select name="theme" id="theme" class="objectParam">
 					<cfloop array="#arrMuraNivoThemes#" index="theme">
-						<option value="#LCase(theme)#"<cfif params.theme eq theme> selected="selected"</cfif>>#HTMLEditFormat(theme)#</option>
+						<option value="#LCase(theme)#"<cfif params.theme eq theme> selected="selected"</cfif>>#esapiEncode('html', theme)#</option>
 					</cfloop>
 				</select>
 			</dd>
@@ -90,7 +90,7 @@
 							<option value=""> &ndash; Select &ndash; </option>
 						</cfif>
 						<cfloop query="rsFeeds">
-							<option value="#feedid#"<cfif params.feed eq feedid> selected="selected"</cfif>>#HTMLEditFormat(name)#</option>
+							<option value="#feedid#"<cfif params.feed eq feedid> selected="selected"</cfif>>#esapiEncode('html', name)#</option>
 						</cfloop>
 					</select>
 				<cfelse>
@@ -105,7 +105,7 @@
 			<dd>
 				<select name="size" id="size" class="objectParam">
 					<cfloop array="#arrImageSizes#" index="image">
-						<option value="#LCase(image)#"<cfif params.size eq image> selected="selected"</cfif>>#HTMLEditFormat(image)#</option>
+						<option value="#LCase(image)#"<cfif params.size eq image> selected="selected"</cfif>>#esapiEncode('html', image)#</option>
 					</cfloop>
 				</select>
 			</dd>
@@ -113,16 +113,16 @@
 			<div id="customOptions"<cfif params.size neq 'custom'> style="display:none;"</cfif>>
 				<dt><label for="width">Slider Width</label></dt>
 				<dd>
-					<input type="text" 
+					<input type="text"
 						name="width" id="width"
-						class="objectParam" 
+						class="objectParam"
 						value="#params.width#" />
 				</dd>
 				<dt><label for="height">Slider Height</label></dt>
 				<dd>
-					<input type="text" 
-						name="height" id="height" 
-						class="objectParam" 
+					<input type="text"
+						name="height" id="height"
+						class="objectParam"
 						value="#params.height#" />
 				</dd>
 			</div>
@@ -131,27 +131,27 @@
 			<dd>
 				<select name="effect" id="effect" class="objectParam">
 					<cfloop array="#arrMuraNivoEffects#" index="e">
-						<option value="#e#"<cfif params.effect eq e> selected="selected"</cfif>>#HTMLEditFormat(e)#</option>
+						<option value="#e#"<cfif params.effect eq e> selected="selected"</cfif>>#esapiEncode('html', e)#</option>
 					</cfloop>
 				</select>
 			</dd>
 			<!--- SLIDER ID --->
 			<dt><label for="sliderid">Slider CSS ID</label></dt>
 			<dd>
-				<input type="text" 
+				<input type="text"
 					name="sliderid" id="sliderid"
-					class="objectParam" 
+					class="objectParam"
 					value="#params.sliderid#" />
 			</dd>
 			<!--- SHOW CAPTION --->
 			<dt><label for="showcaption">Show Caption</label></dt>
 			<dd>
 				<label class="radio inline">
-					<input type="radio" class="objectParam" name="showcaption" value="true" <cfif params.showcaption> checked="checked"</cfif> /> 
+					<input type="radio" class="objectParam" name="showcaption" value="true" <cfif params.showcaption> checked="checked"</cfif> />
 					Yes
 				</label>
 				<label class="radio inline">
-					<input type="radio" class="objectParam" name="showcaption" value="false" <cfif not params.showcaption> checked="checked"</cfif> /> 
+					<input type="radio" class="objectParam" name="showcaption" value="false" <cfif not params.showcaption> checked="checked"</cfif> />
 					No
 				</label>
 			</dd>
@@ -160,7 +160,7 @@
 			<dd>
 				<select name="pausetime" id="pausetime" class="objectParam">
 					<cfloop from="1" to="10" index="s">
-						<option value="#s#"<cfif params.pausetime eq s> selected="selected"</cfif>>#HTMLEditFormat(s)#</option>
+						<option value="#s#"<cfif params.pausetime eq s> selected="selected"</cfif>>#esapiEncode('html', s)#</option>
 					</cfloop>
 				</select>
 			</dd>
@@ -169,17 +169,17 @@
 			<dt><label for="outputslidelinks">Link Slides</label></dt>
 			<dd>
 				<label class="radio inline">
-					<input type="radio" class="objectParam" name="outputslidelinks" value="true" <cfif params.outputslidelinks> checked="checked"</cfif> /> 
+					<input type="radio" class="objectParam" name="outputslidelinks" value="true" <cfif params.outputslidelinks> checked="checked"</cfif> />
 					Yes
 				</label>
 				<label class="radio inline">
-					<input type="radio" class="objectParam" name="outputslidelinks" value="false" <cfif not params.outputslidelinks> checked="checked"</cfif> /> 
+					<input type="radio" class="objectParam" name="outputslidelinks" value="false" <cfif not params.outputslidelinks> checked="checked"</cfif> />
 					No
 				</label>
 			</dd>
 			<!--- MISC. --->
 			<input type="hidden" name="configureddts" class="objectParam" value="#now()#" />
-			<input type="hidden" name="configuredby" class="objectParam" value="#HTMLEditFormat($.currentUser('LName'))#, #HTMLEditFormat($.currentUser('FName'))#" />
+			<input type="hidden" name="configuredby" class="objectParam" value="#esapiEncode('html_attr', $.currentUser('LName'))#, #esapiEncode('html_attr', $.currentUser('FName'))#" />
 		</dl>
 	</div>
 </cfoutput>
