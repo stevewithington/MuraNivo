@@ -1,50 +1,30 @@
-#MuraNivo
+# MuraNivo
 
-MuraNivo is a Mura CMS plugin that utilizes [Nivo Slider](http://nivo.dev7studios.com/) to create configurable slide show display objects.
+MuraNivo is a Mura CMS Display Object (or "Module" in v7.1+) that utilizes [Nivo Slider](http://nivo.dev7studios.com/) to create configurable slide show display objects. If you're looking for the Mura CMS "plugin" version of this project, visit the ["plugin" branch](https://github.com/stevewithington/MuraNivo/tree/plugin). However, going forward, you should use this "Display Object" version instead.
 
-##How To
+**NOTE:** *The Nivo Slider version (v3.2) used in this project is licensed under [MIT](http://www.opensource.org/licenses/mit-license.php). However, the [latest version of Nivo Slider](https://themeisle.com/plugins/nivo-slider) is not.*
 
-**NOTE:** Before using this plugin, you will need to create a [Local Content Index](http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/). Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image. You may simply wish to create a content collection of a Mura Gallery, which is perfectly suited for this plugin.
+## How To
 
-![Example Local Content Index](assets/images/muranivo-1.png)
+**NOTE:** Before using this plugin, you will need to create a [Local Index](http://docs.getmura.com/v7/content-managers/advanced-content/collections/local-indexes/). Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image.
 
-Once a [Local Content Index](http://docs.getmura.com/v6/content-managers/building-the-home-page/content-collections/local-content-indexes/) has been created, simply follow the remaining steps below.
+Once a [Local Content Index](http://docs.getmura.com/v7/content-managers/advanced-content/collections/local-indexes/) has been created, simply follow the remaining steps below.
 
-* From the **Site Manager**, select any content item to edit it (e.g., the 'About Us' page)
-* Go to **Layout & Objects** tab
-* From the **Available Content Objects** select menu, choose **Plugins**
-* From the **Select Plugin** select menu, choose **MuraNivo**
-* In the list of display objects, click **MuraNivo Slider** and assign it to your desired display region
-  ![Example Layout and Objects tab](assets/images/muranivo-2.png)
-* The **MuraNivo** configurator will open
-	* Select a **Nivo Theme**
-	* If you have created any Local Content Indexes, choose one of them from the **Local Content Index** select menu
-    ![Example Configurator With a Content Index](assets/images/muranivo-3.png)
-  * If you have *not* created a Local Content Index, you will see a notice informing you to do so
-    ![Example Configurator Without a Content Index](assets/images/muranivo-5.png)
-	* Choose your desired **Slider Size**. If your site has any custom-defined image sizes, the name will appear in the list.
-	* Select a **Transition Effect**
-	* If you wish to use your own CSS ID, enter that in the **Slider CSS ID** text field. This ID will create a wrapper as: **yourCSSID-wrapper**. In addition, the ID will be used with the slider itself.
-	* If you wish to display captions, select **Yes** for **Show Caption**. If selected, the content node's Title and Summary will appear in a caption area if any text has been entered in the Summary field.
-	* Select your **How long to show each slide (in seconds)**.
-	* If you wish to output the links for each slide, select **Yes** for **Link Slides**. If selected, each slide will be wrapped with its URL.
-  * When finished, you should see your MuraNivo slider appear in the region you specified
-    ![Example MuraNivo Slider](assets/images/muranivo-4.png)
+**Detailed instructions coming soon**
 
 
-##Responsive-ness
+## Responsive-ness
 
 **Just so you know** ... Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select 'small' for the image size and assign it to the main content area of a one_column.cfm layout template, due to the responsive-ness going on, scaling of the image will occur. You may want to either use custom and put your own height and width in, or create a custom image size by going to **Site Config** > **Edit Site**, then selecting the **Images** tab.
 
 
-##Tested With
+## Tested With
 * [Mura CMS](http://www.getmura.com) Core Version 7.0+
-* [Adobe ColdFusion](http://www.adobe.com/coldfusion) 2016.0.02.299200
-* [Lucee](http://lucee.org) 5.0.0.254
+* [Lucee](http://lucee.org) 5.2.3.35
 
 
-##License
-Copyright 2015-2016 Stephen J. Withington, Jr.
+## License
+Copyright 2015-2017 Stephen J. Withington, Jr.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 

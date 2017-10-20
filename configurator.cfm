@@ -3,7 +3,7 @@
 *
 * This file is part of MuraNivo
 *
-* Copyright 2015-2016 Stephen J. Withington, Jr.
+* Copyright 2015-2017 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -29,13 +29,10 @@
 
 	// Image Sizes
 	arrImageSizes = ['small','medium','large','custom'];
-
-	// IF MuraCMS v6.0+, there may be one or more custom predefined image sizes available
-	if ( ListFirst(m.globalConfig('version'), '.') >= 6 ) {
-		rsImageSizes = m.siteConfig().getCustomImageSizeQuery();
-		arrCustomImageSizes = ListToArray(ValueList(rsImageSizes.name));
-		arrImageSizes.addAll(arrCustomImageSizes);
-	}
+	// get custom image sizes too
+	rsImageSizes = m.siteConfig().getCustomImageSizeQuery();
+	arrCustomImageSizes = ListToArray(ValueList(rsImageSizes.name));
+	arrImageSizes.addAll(arrCustomImageSizes);
 
 	param name='objectparams.feed' default='';
 	param name='objectparams.theme' default='default';
