@@ -19,8 +19,7 @@
 	param name='objectparams.pausetime' default=3;
 	param name='objectparams.outputslidelinks' default=true;
 
-	//local.pluginpath = m.globalConfig('context') & '/plugins/MuraNivo';
-	local.modulepath = m.globalConfig('context') & '/modules/muranivo';
+	local.modulepath = RemoveChars(GetDirectoryFromPath(GetCurrentTemplatePath()), 1, Len(m.globalConfig('webroot')));
 	local.feed = m.getBean('feed').loadby(objectparams.feed);
 	local.iterator = local.feed.getIterator();
 
@@ -73,10 +72,10 @@
 		<script>
 			Mura(function(m) {
 				m.loader()
-					.loadcss('#local.modulepath#/assets/nivo-slider/nivo-slider.css')
-					.loadcss('#local.modulepath#/assets/nivo-slider/themes/#objectparams.theme#/#objectparams.theme#.css')
+					.loadcss('#local.modulepath#assets/nivo-slider/nivo-slider.css')
+					.loadcss('#local.modulepath#assets/nivo-slider/themes/#objectparams.theme#/#objectparams.theme#.css')
 					.loadjs(
-						'#local.modulepath#/assets/nivo-slider/jquery.nivo.slider.pack.js',
+						'#local.modulepath#assets/nivo-slider/jquery.nivo.slider.pack.js',
 						function() {
 							jQuery(document).ready(function($) {
 								$('###objectparams.sliderid#').nivoSlider({
