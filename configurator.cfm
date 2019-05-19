@@ -3,13 +3,13 @@
 *
 * This file is part of MuraNivo
 *
-* Copyright 2015-2017 Stephen J. Withington, Jr.
+* Copyright 2015-2019 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 */
 
-	// Nivo Slider Options: http://nivo.dev7studios.com/support/jquery-plugin-usage/
+	// Nivo Slider Options: <http://docs.themeisle.com/article/485-getting-started-with-the-nivo-slider-jquery-plugin>
 
 	// Mura Scope
 	if ( !IsDefined('m') ) {

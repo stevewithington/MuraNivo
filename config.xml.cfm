@@ -3,7 +3,7 @@
 *
 * This file is part of MuraNivo
 *
-* Copyright 2015-2017 Stephen J. Withington, Jr.
+* Copyright 2015-2019 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
