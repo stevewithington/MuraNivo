@@ -3,7 +3,7 @@
 *
 * This file is part of MuraNivo
 *
-* Copyright 2015-2019 Stephen J. Withington, Jr.
+* Copyright 2015-2020 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -61,7 +61,7 @@
 						<cfset local.item=local.iterator.next()>
 						<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.')) and Len(Trim(local.item.getSummary()))>
 							<div id="#objectparams.sliderid#-caption-#local.iterator.getRecordIndex()#" class="nivo-html-caption">
-								<h4>#esapiEncode('html', local.item.getTitle())#</h4>
+								<h4>#EncodeForHTML(local.item.getTitle())#</h4>
 								#local.item.getSummary()#
 							</div>
 						</cfif>
@@ -83,7 +83,6 @@
 									pauseTime: #Val(objectparams.pausetime) * 1000#
 								});
 							});
-
 						}
 					);
 			});
