@@ -1,6 +1,6 @@
 # MuraNivo
 
-MuraNivo is a Mura CMS Display Object (or "Module" in v7.1+) that utilizes [Nivo Slider](http://nivo.dev7studios.com/) to create configurable slide show display objects. If you're looking for the Mura CMS "plugin" version of this project, visit the ["plugin" branch](https://github.com/stevewithington/MuraNivo/tree/plugin). However, going forward, you should use this "Display Object" version instead.
+MuraNivo is a custom [Mura Display Object](https://docs.getmura.com/v7-1/content-managers/structure/#section-inline-edit-display-objects) which utilizes [Nivo Slider](https://github.com/Codeinwp/Nivo-Slider-jQuery) to create configurable slide show display objects. If you're looking for the Mura `plugin` version of this project, visit the ["plugin" branch](https://github.com/stevewithington/MuraNivo/tree/plugin). However, going forward, you should use this `Display Object` version instead.
 
 **NOTE:** *The Nivo Slider version (v3.2) used in this project is licensed under [MIT](http://www.opensource.org/licenses/mit-license.php). However, the [latest version of Nivo Slider](https://themeisle.com/plugins/nivo-slider) is not.*
 
