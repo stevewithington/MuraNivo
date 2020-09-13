@@ -3,7 +3,7 @@
 *
 * This file is part of MuraNivo
 *
-* Copyright 2015-2019 Stephen J. Withington, Jr.
+* Copyright 2015-2020 Stephen J. Withington, Jr.
 * Licensed under the Apache License, Version v2.0
 * http://www.apache.org/licenses/LICENSE-2.0
 *
@@ -62,7 +62,7 @@
 		<label class="mura-control-label" for="size">Nivo Theme</label>
 		<select name="theme" id="theme" class="objectParam">
 			<cfloop array="#arrMuraNivoThemes#" index="theme">
-				<option value="#LCase(theme)#"<cfif objectparams.theme eq theme> selected="selected"</cfif>>#esapiEncode('html', theme)#</option>
+				<option value="#LCase(theme)#"<cfif objectparams.theme eq theme> selected="selected"</cfif>>#EncodeForHTML(theme)#</option>
 			</cfloop>
 		</select>
 	</div>
@@ -77,7 +77,7 @@
 					<option value=""> &ndash; Select &ndash; </option>
 				</cfif>
 				<cfloop query="rsFeeds">
-					<option value="#feedid#"<cfif objectparams.feed eq feedid> selected="selected"</cfif>>#esapiEncode('html', name)#</option>
+					<option value="#feedid#"<cfif objectparams.feed eq feedid> selected="selected"</cfif>>#EncodeForHTML(name)#</option>
 				</cfloop>
 			</select>
 		<cfelse>
@@ -121,7 +121,7 @@
 		<label class="mura-control-label" for="size">Transition Effect</label>
 		<select name="effect" id="effect" class="objectParam">
 			<cfloop array="#arrMuraNivoEffects#" index="e">
-				<option value="#e#"<cfif objectparams.effect eq e> selected="selected"</cfif>>#esapiEncode('html', e)#</option>
+				<option value="#e#"<cfif objectparams.effect eq e> selected="selected"</cfif>>#EncodeForHTML(e)#</option>
 			</cfloop>
 		</select>
 	</div>
@@ -153,7 +153,7 @@
 		<label class="mura-control-label" for="size">How long to show each slide (in seconds)</label>
 		<select name="pausetime" id="pausetime" class="objectParam">
 			<cfloop from="1" to="10" index="s">
-				<option value="#s#"<cfif objectparams.pausetime eq s> selected="selected"</cfif>>#esapiEncode('html', s)#</option>
+				<option value="#s#"<cfif objectparams.pausetime eq s> selected="selected"</cfif>>#EncodeForHTML(s)#</option>
 			</cfloop>
 		</select>
 	</div>
@@ -173,5 +173,5 @@
 
 	<!--- MISC. --->
 	<input type="hidden" name="configureddts" class="objectParam" value="#now()#" />
-	<input type="hidden" name="configuredby" class="objectParam" value="#esapiEncode('html_attr', m.currentUser('LName'))#, #esapiEncode('html_attr', m.currentUser('FName'))#" />
+	<input type="hidden" name="configuredby" class="objectParam" value="#EncodeForHTMLAttribute(m.currentUser('LName'))#, #EncodeForHTMLAttribute(m.currentUser('FName'))#" />
 </cfoutput>
