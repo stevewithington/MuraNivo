@@ -14,7 +14,7 @@ Before using this plugin:
 
 Once a [Local Index](https://docs.getmura.com/v7-1/content-managers/advanced-content/#section-local-indexes) has been created which contains one or more Content items with an **Associated Image**, follow the remaining steps below.
 
-*Detailed instructions coming soon.*
+`@TODO:` *Create detailed instructions*
 
 ## Responsive-ness
 
