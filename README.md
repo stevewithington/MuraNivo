@@ -6,7 +6,7 @@ MuraNivo is a Mura CMS Display Object (or "Module" in v7.1+) that utilizes [Nivo
 
 ## How To
 
-**NOTE:** Before using this plugin, you will need to create a [Local Index](http://docs.getmura.com/v7/content-managers/advanced-content/collections/local-indexes/). Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image.
+**NOTE:** Before using this plugin, you will need to create a [Local Index](https://docs.getmura.com/v7-1/content-managers/advanced-content/#section-local-indexes). Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image.
 
 Once a [Local Content Index](http://docs.getmura.com/v7/content-managers/advanced-content/collections/local-indexes/) has been created, simply follow the remaining steps below.
 
