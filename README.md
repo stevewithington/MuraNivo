@@ -6,24 +6,28 @@ MuraNivo is a Mura CMS Display Object (or "Module" in v7.1+) that utilizes [Nivo
 
 ## How To
 
-**NOTE:** Before using this plugin, you will need to create a [Local Index](https://docs.getmura.com/v7-1/content-managers/advanced-content/#section-local-indexes). Your content collection should contain content items which have Primary Associated Images assigned to them. For example, most 'News' items typically have a Primary Associated Image.
+Before using this plugin:
 
-Once a [Local Content Index](http://docs.getmura.com/v7/content-managers/advanced-content/collections/local-indexes/) has been created, simply follow the remaining steps below.
+* Create a [Local Index](https://docs.getmura.com/v7-1/content-managers/advanced-content/#section-local-indexes). *Local Indexes are also commonly referred to as **Content Collections***.
+* The **Local Index** should contain [Content](https://docs.getmura.com/v7-1/content-managers/basic-content/) items with an [Associated Image](https://docs.getmura.com/v7-1/content-managers/basic-content/#section-basic-tab) assigned to each of them.
+  * **NOTE**: *Any Content items within the **Local Index** that does not have an **Associated Image** assigned to it **will not appear** in the slider output.*
 
-Detailed instructions coming soon.
+Once a [Local Index](https://docs.getmura.com/v7-1/content-managers/advanced-content/#section-local-indexes) has been created which contains one or more Content items with an **Associated Image**, follow the remaining steps below.
+
+*Detailed instructions coming soon.*
 
 ## Responsive-ness
 
-**Just so you know** ... Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select 'small' for the image size and assign it to the main content area of a one_column.cfm layout template, due to the responsive-ness going on, scaling of the image will occur. You may want to either use custom and put your own height and width in, or create a custom image size by going to **Site Config** > **Edit Site**, then selecting the **Images** tab.
+*Just so you know* ... Nivo Slider is a responsive slider, and as such, the slider will automatically attempt to fill the entire width of its outer container. So if you select `small` for the image size and assign it to the **Main Content** region of a `one_column.cfm` layout template, due to the *responsive-ness* going on, scaling of the image will occur. You may want to either use `custom` and enter your desired `height` and `width`, *or* create a `Custom Image` size by going to **Site Config** > **Edit Site**, then selecting the **Images** tab. See <https://docs.getmura.com/v7-1/theme-developers/customizing-default-output/#section-image-sizes> for more information.
 
 ## Tested With
 
-* [Mura CMS](http://www.getmura.com) Core Version 7.0+
+* [Mura CMS](http://www.getmura.com) Core Version 7.1+
 * [Lucee](http://lucee.org) 5.2.3.35
 
 ## License
 
-Copyright 2015-2019 Stephen J. Withington, Jr.
+Copyright 2015-2020 Stephen J. Withington, Jr.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
